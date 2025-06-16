@@ -1,0 +1,179 @@
+/* html, body, * {
+  cursor: url('../media/cursor2.png'), auto !important;
+}
+
+*:active {
+  cursor: url('../media/cursor-click2.png'), auto !important;
+} */
+
+.vid {
+  border: solid black 5px;
+  border-radius: 5%;
+}
+
+.projectLinks {
+  color: rgb(20, 146, 199);
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px;
+}
+
+.projectLinks:hover {
+  border-bottom: solid rgb(20, 146, 199) 3px;
+  max-width: fit-content;
+  color: rgb(20, 146, 199);
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px;
+}
+
+.imgCard {
+  width: 250px;
+  border: solid #3498db 3px;
+  border-radius: 5%;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fdfdfd;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3498db;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, #3498db, #6dd5fa);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #3498db;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #f1f1f1;
+}
+
+/* About Section */
+.about,
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2,
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p,
+.contact p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem;
+  background: #f4f9fd;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #3498db;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: #fafafa;
+  color: #777;
+}
