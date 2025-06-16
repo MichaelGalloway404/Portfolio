@@ -72,6 +72,13 @@ nav ul {
   list-style: none;
 }
 
+/* Override for narrow screens */
+@media screen and (max-width: 450px){
+  nav ul {
+    display: block; 
+  }
+}
+
 nav ul li {
   margin-left: 2rem;
 }
