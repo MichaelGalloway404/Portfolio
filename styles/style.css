@@ -1,6 +1,7 @@
 .vid {
   border: solid black 5px;
   border-radius: 5%;
+  background-color: black;
 }
 
 .projectLinks {
