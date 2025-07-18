@@ -1,11 +1,3 @@
-/* html, body, * {
-  cursor: url('../media/cursor2.png'), auto !important;
-}
-
-*:active {
-  cursor: url('../media/cursor-click2.png'), auto !important;
-} */
-
 .vid {
   border: solid black 5px;
   border-radius: 5%;
