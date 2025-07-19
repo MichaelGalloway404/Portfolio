@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="../styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../styles/style.css" />
 </head>
+
 <body>
-  <header>
-    
+    <header>
 
-    <nav>
-      <div class="logo">Michael D. Galloway</div>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-      </ul>
-    </nav>
-    
-    <section class="hero">
-    <video class="vid" height="600" width="1150" controls>
-    <source src="../media/timeLapsISS.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-      <h1>The International Space Station (ISS) Tracker</h1>
-      <p>This is a fun little REST API project for tracking and plotting out the path of the ISS.
-This project makes use of axios, body-parser, and express for a Node based server, with the use of EJS in the front end.
 
-There is a demo timelapsed video(timeLapsISS.mp4) and image(ISSFinderDemo.png) of the project to view the product.
+        <nav>
+            <div class="logo">Michael D. Galloway</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
 
-To get the project running locally, you can:
+        <section class="hero">
+            <video class="vid" height="600" width="1150" controls>
+                <source src="../media/timeLapsISS.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h1>The International Space Station (ISS) Tracker</h1>
+            <p>
+                <strong>This is a fun little REST API project for tracking and plotting out the path of the ISS.<br>
+                    This project makes use of axios, body-parser, and express for a Node based server, with the use of
+                    EJS in the front end.<br>
+            </p>
+            <a href="https://github.com/MichaelGalloway404/ISSTracker" class="btn">Go to repo.</a>
+        </section>
+    </header>
 
-        git clone https://github.com/your-username/ISSTracker.git cd ISSTracker npm install node index.js Once the server is running, open your browser and go to: http://localhost:3000
+    <main>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email me at <a href="mailto:michael.d.galloway404@gmail.com">michael.d.galloway404@gmail.com</a></p>
+        </section>
+    </main>
 
-If you're making changes and want the server to auto-restart on file changes, install and use nodemon:
-
-        npm install --save-dev nodemon npx nodemon index.js
-
-</p>
-      <a href="https://github.com/MichaelGalloway404/ISSTracker" class="btn">Go to repo.</a>
-    </section>
-  </header>
-
-  <main>
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Email me at <a href="mailto:michael.d.galloway404@gmail.com">michael.d.galloway404@gmail.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Michael D. Galloway. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Michael D. Galloway. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
