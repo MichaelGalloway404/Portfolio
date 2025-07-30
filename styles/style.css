@@ -26,8 +26,8 @@
 
 .imgCard {
   width: 250px;
-  border: solid #3498db 3px;
-  border-radius: 5%;
+  /* border: solid #3498db 3px; */
+  border-radius: 10px;
 }
 
 /* Reset & Base Styles */
