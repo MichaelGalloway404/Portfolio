@@ -24,6 +24,10 @@
   margin: 10px;
 }
 
+h2{
+  margin: 20px;
+}
+
 .imgCard {
   width: 250px;
   /* border: solid #3498db 3px; */
