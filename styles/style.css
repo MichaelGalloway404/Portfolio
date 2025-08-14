@@ -27,7 +27,15 @@
 h2{
   margin: 20px;
 }
-
+.block{
+  display: block;
+  text-align: left;
+  background-color: #f4f9fd;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.244);
+}
 .imgCard {
   width: 250px;
   /* border: solid #3498db 3px; */
