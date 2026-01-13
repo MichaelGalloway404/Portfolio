@@ -31,8 +31,7 @@ h2{
   display: block;
   text-align: left;
   background-color: #f4f9fd;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 35px;
   border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.244);
 }
