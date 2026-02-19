@@ -131,6 +131,9 @@ nav ul li a:hover {
 }
 
 /* About Section */
+.about{
+  padding: 50px;
+}
 .about,
 .contact {
   padding: 4rem 2rem;
