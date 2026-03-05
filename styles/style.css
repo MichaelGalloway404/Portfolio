@@ -86,7 +86,6 @@ nav ul {
 
 #topBtn {
   display: none;
-  /* Hidden by default */
   position: fixed;
   bottom: 30px;
   right: 30px;
