@@ -10,6 +10,14 @@
   background-color: black;
 }
 
+.projectImageLink{
+  border: solid rgb(91, 181, 211) 2px;
+  border-radius: 5px;
+  background-color: black;
+  display: flex;
+  width: fit-content;
+}
+
 .projectLinks {
   color: rgb(20, 146, 199);
   text-decoration: none;
@@ -45,8 +53,12 @@ h2 {
 
 .imgCard {
   width: 250px;
-  /* border: solid #3498db 3px; */
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imgCard:hover{
+  transform: scale(1.4);
 }
 
 /* Reset & Base Styles */
@@ -186,7 +198,7 @@ nav ul li a:hover {
 /* Projects Section */
 .projects {
   padding: 4rem 2rem;
-  background: #f4f9fd;
+  background: #d7dce0;
 }
 
 .projects h2 {
