@@ -1,6 +1,6 @@
-.shadow{
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
-  padding: 15px; 
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
   border-radius: 8px;
 }
 
@@ -10,7 +10,7 @@
   background-color: black;
 }
 
-.projectImageLink{
+.projectImageLink {
   border: solid rgb(91, 181, 211) 2px;
   border-radius: 5px;
   background-color: black;
@@ -57,8 +57,8 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.imgCard:hover{
-  transform: scale(1.4);
+.imgCard:hover {
+  transform: scale(1.2);
 }
 
 /* Reset & Base Styles */
@@ -232,4 +232,64 @@ footer {
   font-size: 0.9rem;
   background: #fafafa;
   color: #777;
+}
+
+/* Mark down */
+.md-popup {
+  cursor: pointer;
+  background-color: white;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.md-popup:hover {
+  transform: scale(1.3);
+  background-color: #6dd5fa;
+  padding: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+.md-popup::after {
+  content: "Click for details";
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: 0.8rem;
+  background: #ff6161;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.md-popup:hover::after {
+  opacity: 1;
+}
+
+.modal-content {
+  background: rgb(208, 240, 255);
+  margin: 1% auto;
+  padding: 30px;
+  width: 70%;
+  max-height: 70%;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
 }

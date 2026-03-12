@@ -56,12 +56,14 @@
           <a href="https://github.com/MichaelGalloway404/BookScape" target="_blank" class="projectLinks">repo:
             Book Scape writen for use on Vercel.com</a>
         </div>
+
         <!-- PROJECT 2 -->
         <div class="project-card">
           <h3>Linear Q-learning Game, Model, and Agent</h3>
           </a><a href="./pages/LinearQDemo.html" target="_blank" class="projectImageLink"><img class="imgCard"
               src="./media/LinearQ_Demo.png"></a>
-          <p>Wrote a simple game in pygame were the player tries to pick up coins within a time limit and an enemy tries
+          <p class="md-popup" data-md="./markdown/Q_learning.md">
+            Wrote a simple game in pygame were the player tries to pick up coins within a time limit and an enemy tries
             to stop them.
             I then wrote a Linear Q-learning agent and model to be able to play the game.</p>
           <a href="./pages/LinearQDemo.html" target="_blank" class="projectLinks">Watch a demo</a>
@@ -74,7 +76,7 @@
           <h3>AI Object Recognition from Scratch</h3>
           </a><a href="./pages/resNet9Demo.html" target="_blank" class="projectImageLink"><img class="imgCard"
               src="./media/AI_Obj_Rec.png"></a>
-          <p>Research project I did involving the resnet 9 architecture
+          <p class="md-popup" data-md="./markdown/resNet9.md">Research project I did involving the resnet 9 architecture
             This is a Convolutional Neural Networks model I wrote, trained, and presented using the Resnet-9
             architecture for a research course at Eastern Oregon University in Fall 2024
             The model can distinguish between planes, cars, birds, cats, deer, dogs, frogs, horses, humans, or ships.
@@ -145,8 +147,8 @@
         <!-- PROJECT 8 -->
         <div class="project-card">
           <h3>Dice Game called Goofed</h3>
-          </a><a href="https://michaelgalloway404.github.io/DiceGameGoofed/" target="_blank" class="projectImageLink"><img
-              class="imgCard" src="./media/goofed_dice_game.png"></a>
+          </a><a href="https://michaelgalloway404.github.io/DiceGameGoofed/" target="_blank"
+            class="projectImageLink"><img class="imgCard" src="./media/goofed_dice_game.png"></a>
           <p>Dice game similar to a dice game that originated in the early 1600's called dice and has had many names
             since then. The 2D dice used in this game
             are logically equivalent to rolling real dice. When a die is rolled its current face is determined by both
@@ -181,8 +183,8 @@
         <!-- PROJECT 10 -->
         <div class="project-card">
           <h3>The Game of Division</h3>
-          </a><a href="https://michaelgalloway404.github.io/TheDivisionGame/" target="_blank" class="projectImageLink"><img
-              class="imgCard" src="./media/Division_Game.png"></a>
+          </a><a href="https://michaelgalloway404.github.io/TheDivisionGame/" target="_blank"
+            class="projectImageLink"><img class="imgCard" src="./media/Division_Game.png"></a>
           <p>This is a grid based game that uses division, the player is looking to get the least penalty. The game has
             a rules tab.</p>
           <a href="https://michaelgalloway404.github.io/TheDivisionGame/" target="_blank" class="projectLinks">Test out
@@ -319,7 +321,51 @@
   <footer>
     <p>&copy; 2025 Michael D. Galloway. All rights reserved.</p>
   </footer>
+
+  <!-- Markdown Modal -->
+  <div id="mdModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="mdContent"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
+    // display the read me from my repos
+    const modal = document.getElementById("mdModal");
+    const modalContent = document.getElementById("mdContent");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".md-popup").forEach(p => {
+      p.addEventListener("click", async () => {
+
+        const mdFile = p.dataset.md;
+
+        try {
+          const response = await fetch(mdFile);
+          const markdown = await response.text();
+
+          modalContent.innerHTML = marked.parse(markdown);
+          modal.style.display = "block";
+
+        } catch (err) {
+          modalContent.innerHTML = "<p>Error loading markdown file.</p>";
+          modal.style.display = "block";
+        }
+
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    // button to send user back to top of screen
     const topBtn = document.getElementById("topBtn");
 
     window.onscroll = function () {
