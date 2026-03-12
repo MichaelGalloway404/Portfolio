@@ -11,11 +11,39 @@
 }
 
 .projectImageLink {
-  border: solid rgb(91, 181, 211) 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.projectImageLink::after {
+  content: "Click for Demo";
+  position: absolute;
+  left: 5px;
+  font-size: 0.8rem;
+  background: #ff6161;
+  color: white;
+  padding: 3px 8px;
   border-radius: 5px;
-  background-color: black;
-  display: flex;
-  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.projectImageLink:hover::after {
+  opacity: 1;
+}
+
+.projectImageLink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.442);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 10px;
+}
+
+.projectImageLink:hover::before {
+  opacity: 1;
 }
 
 .projectLinks {
@@ -54,12 +82,12 @@ h2 {
 .imgCard {
   width: 250px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
-.imgCard:hover {
+/* .imgCard:hover {
   transform: scale(1.2);
-}
+} */
 
 /* Reset & Base Styles */
 * {
