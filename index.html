@@ -349,19 +349,28 @@
           modalContent.innerHTML = marked.parse(markdown);
           modal.style.display = "block";
 
+          // prevent page scrolling
+          document.body.style.overflow = "hidden";
+
         } catch (err) {
           modalContent.innerHTML = "<p>Error loading markdown file.</p>";
           modal.style.display = "block";
+          document.body.style.overflow = "hidden";
         }
 
       });
     });
 
-    closeBtn.onclick = () => modal.style.display = "none";
+    // allow the screen to be able to scroll agian
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    };
 
     window.onclick = (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
+        document.body.style.overflow = "auto";
       }
     };
 
