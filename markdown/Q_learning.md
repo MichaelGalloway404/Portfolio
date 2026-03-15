@@ -195,5 +195,3 @@ This project demonstrates several important machine learning and AI concepts:
 - Experience Replay
 - Epsilon-Greedy Exploration
 - Custom Game Environment Design
-
----  
