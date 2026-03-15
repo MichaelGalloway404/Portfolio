@@ -5,11 +5,15 @@ This project demonstrates how a **reinforcement learning agent can learn to play
 The project includes:
 
 - A **custom 2D game environment built with Pygame**
+- A **custom environment**
 - A **Linear Q-Learning model implemented in PyTorch**
+- A **state representation for decision making**
 - A **training pipeline with experience replay**
 - A **trained AI agent that can autonomously play the game**
+- A **real-time visualized AI agent**
 
-The goal of the game is for the player (or AI agent) to **collect coins while avoiding an enemy** within a time limit.
+The goal of the game is for the player (or AI agent) to **collect coins while avoiding an enemy** within a time limit.  
+This project highlights the ability to combine **machine learning, simulation environments, and game development** to build intelligent agents.
 
 ---
 
@@ -192,16 +196,4 @@ This project demonstrates several important machine learning and AI concepts:
 - Epsilon-Greedy Exploration
 - Custom Game Environment Design
 
----
-
-# Why This Project Matters
-
-Building a reinforcement learning system from scratch required implementing:
-
-- A **custom environment**
-- A **state representation for decision making**
-- A **training loop with replay memory**
-- A **neural network Q-function**
-- A **real-time visualized AI agent**
-
-This project highlights the ability to combine **machine learning, simulation environments, and game development** to build intelligent agents.
+---  
