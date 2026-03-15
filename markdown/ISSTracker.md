@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project demonstrates real-time API integration, 2D data mapping, and interactive visualization. It fetches live ISS location data from the https://wheretheiss.at/ website and plots both the current position and historical trajectory on a 2D canvas representing the Earth.
+This project demonstrates real-time API integration, 2D data mapping, and interactive visualization. It fetches live ISS location data from the wheretheiss.at website and plots both the current position and historical trajectory on a 2D canvas representing the Earth.
 
 Key capabilities:
 
