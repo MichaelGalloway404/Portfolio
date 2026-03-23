@@ -13,6 +13,7 @@
 .projectImageLink {
   position: relative;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .projectImageLink::after {
@@ -82,12 +83,9 @@ h2 {
 .imgCard {
   width: 250px;
   border-radius: 10px;
-  /* transition: transform 0.3s ease; */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
-/* .imgCard:hover {
-  transform: scale(1.2);
-} */
 
 /* Reset & Base Styles */
 * {
@@ -144,12 +142,6 @@ nav ul {
   background-color: #555;
 }
 
-/* Override for narrow screens */
-@media screen and (max-width: 450px) {
-  nav ul {
-    display: block;
-  }
-}
 
 nav ul li {
   margin-left: 2rem;
@@ -245,8 +237,7 @@ nav ul li a:hover {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  height: 750px;
-  max-height: 750px;
+  max-height: fit-content;
 }
 
 .project-card h3 {
@@ -319,4 +310,11 @@ footer {
   float: right;
   font-size: 28px;
   cursor: pointer;
+}
+
+/* Override for narrow screens */
+@media screen and (max-width: 450px) {
+  nav ul {
+    display: block;
+  }
 }
