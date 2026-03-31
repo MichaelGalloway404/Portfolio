@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="../styles/style.css" />
 </head>
+
 <body>
   <header>
     <nav>
@@ -14,26 +16,27 @@
         <li><a href="../index.html">Home</a></li>
       </ul>
     </nav>
-    
+
     <section class="hero">
-    <video class="vid" height="600" width="1150" controls>
-    <source src="../media/ResNet9DemoVid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
       <h1>Res-Net9 research project demo Demo for CS-401</h1>
-      <p class="shadow">ObjectRecognition
-
-        This is a demo of a Convolutional Neural Networks model I trained and presented using the Resnet-9 architecture for a research course at Eastern Oregon University in Fall 2024
-        The model can distinguish between planes, cars, birds, cats, deer, dogs, frogs, horses, humans, or ships.
-        The model was trianed partly on the cifar10 dataset and some extra images to train it on human faces.
-        The trained_ObjAnalysis_demo.py captures an image from the users webcam and classifies it, the user can hold up a picture or object and press spacebar to capture and anylise it.
-
-        The model_trainer.py file will train on data cantained in the cifar10 foulder and output a .pth model file that can be used by trained_ObjAnalysis_demo.py
-
-</p>
-      <a href="https://github.com/MichaelGalloway404/ObjectRecognition" class="btn">Go to repo.</a>
+      <p>
+        <a href="#mdContent" class="btn">Project Info</a>
+        <a href="https://github.com/MichaelGalloway404/ObjectRecognition" class="btn">Go to repo.</a>
+      </p>
+      <video class="vid" height="600" width="1150" controls>
+        <source src="../media/ResNet9DemoVid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
     </section>
   </header>
+  <div class="md-container">
+    <div id="mdContent">
+      <p class="md-popup" data-md="../markdown/resNet9.md">
+        Loading markdown...
+      </p>
+    </div>
+  </div>
 
   <main>
     <section id="contact" class="contact">
@@ -45,5 +48,44 @@
   <footer>
     <p>&copy; 2025 Michael D. Galloway. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadMarkdown() {
+      const mdFile = "../markdown/resNet9.md";
+
+      try {
+        const response = await fetch(mdFile);
+        const markdown = await response.text();
+
+        document.getElementById("mdContent").innerHTML = marked.parse(markdown);
+      } catch (err) {
+        document.getElementById("mdContent").innerHTML = "<p>Failed to load markdown.</p>";
+        console.error(err);
+      }
+    }
+
+    loadMarkdown();
+
+
+    // Scroll-to-top button
+    const topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
+
 </html>
