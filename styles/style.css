@@ -274,7 +274,7 @@ footer {
   position: fixed;
   z-index: 1000;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   overflow: hidden;
 }
 
@@ -310,6 +310,22 @@ footer {
   float: right;
   font-size: 28px;
   cursor: pointer;
+}
+
+.md-container {
+  max-width: 900px;
+  /* keeps it from stretching */
+  margin: 40px auto;
+  /* centers it horizontally */
+  padding: 20px 30px;
+  /* inner spacing */
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 /* Override for narrow screens */

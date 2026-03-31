@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
     <header>
         <nav>
             <div class="logo">Michael D. Galloway</div>
@@ -20,9 +21,7 @@
         <section class="hero">
 
             <h1>Linear Q-learning Game, Model, and Agent</h1>
-            <p>Wrote a simple game in pygame were the player tries to pick up coins within a time limit and an enemy
-                tries to stop them.
-                I then wrote a Linear Q-learning agent and model to be able to play the game.</p>
+            <a href="#mdContent" class="btn">Project Info</a>
             <a href="https://github.com/MichaelGalloway404/LinearQGame" class="btn">Go to repo.</a>
             <br>
             <h2>Demo of Agent without Graphics:</h2>
@@ -40,6 +39,14 @@
         </section>
     </header>
 
+    <div class="md-container">
+        <div id="mdContent">
+            <p class="md-popup" data-md="../markdown/Q_learning.md">
+                Loading markdown...
+            </p>
+        </div>
+    </div>
+
     <main>
         <section id="contact" class="contact">
             <h2>Contact</h2>
@@ -50,6 +57,52 @@
     <footer>
         <p>&copy; 2025 Michael D. Galloway. All rights reserved.</p>
     </footer>
+
+    <!-- <div id="mdModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="mdContent"></div>
+        </div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        async function loadMarkdown() {
+            const mdFile = "../markdown/Q_learning.md";
+
+            try {
+                const response = await fetch(mdFile);
+                const markdown = await response.text();
+
+                document.getElementById("mdContent").innerHTML = marked.parse(markdown);
+            } catch (err) {
+                document.getElementById("mdContent").innerHTML = "<p>Failed to load markdown.</p>";
+                console.error(err);
+            }
+        }
+
+        loadMarkdown();
+
+
+        // Scroll-to-top button
+        const topBtn = document.getElementById("topBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 
 </html>
